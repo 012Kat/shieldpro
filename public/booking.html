@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Service | ShieldPro Security</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Shared header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">ShieldPro Security</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html" class="cta active">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Form -->
+  <section class="booking-section">
+    <div class="container">
+      <h2>Request a Quote / Book a Service</h2>
+      <p>Fill out the form below and our team will get back to you shortly.</p>
+
+      <form id="bookingForm" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="armed">Armed Guard</option>
+          <option value="unarmed">Unarmed Guard</option>
+          <option value="event">Event Security</option>
+          <option value="cctv">CCTV Installation</option>
+          <option value="alarm">Alarm Response</option>
+          <option value="patrol">Mobile Patrol</option>
+        </select>
+
+        <input type="datetime-local" name="datetime" required />
+        <textarea name="notes" placeholder="Additional Notes / Special Instructions"></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+		<div id="responseMessage"></div>
+		
+      <div class="call-option">
+        <p>Prefer to speak to someone?</p>
+        <a href="tel:+27123456789" class="call-button">📞 Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ShieldPro Security. All rights reserved.</p>
+    </div>
+  </footer>
+<script src="booking.js"></script>
+</body>
+</html>
