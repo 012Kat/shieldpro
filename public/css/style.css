@@ -51,20 +51,105 @@
 }
 
 /* Responsive Navigation */
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    gap: 10px;
-    background-color: #222;
-    padding: 15px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    display: none;
+/* Mobile: Phones - screens 600px and below */
+@media (max-width: 600px) {
+  
+  /* Header & Navigation */
+  .nav-container {
+    padding: 0 10px;
   }
 
+  /* Make nav menu vertical and full width */
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    position: static; /* easier to manage on small screens */
+    background-color: #222;
+    padding: 15px 10px;
+    display: none;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  /* Show menu when active */
   .main-nav.active ul {
     display: flex;
+  }
+
+  /* Make nav links bigger and easier to tap */
+  .main-nav a {
+    font-size: 1.2rem;
+    padding: 12px 0;
+  }
+
+  /* Logo smaller */
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Hero buttons stacked */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Services grid single column */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials grid single column */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About two columns to single column */
+  .two-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Team grid single column */
+  .team-grid {
+    flex-direction: column;
+  }
+  .team-member {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Contact form and info stacked vertically */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  /* Booking section container width smaller */
+  .booking-section .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  /* Login section container full width */
+  .login-section .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  /* Footer padding smaller */
+  .site-footer {
+    padding: 15px 10px;
   }
 }
 	
