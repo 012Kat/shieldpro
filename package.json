@@ -1,25 +1,20 @@
-{
+﻿{
   "name": "shieldpro-security",
   "version": "1.0.0",
-  "description": "ShieldPro Security website with admin dashboard, booking, and PostgreSQL backend",
+  "description": "ShieldPro Security booking and admin dashboard app",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "start": "node server/server.js"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "body-parser": "^1.20.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "express-session": "^1.18.2",
-    "pg": "^8.11.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.2"
+    "express-rate-limit": "^6.7.0",
+    "express-session": "^1.17.3",
+    "pg": "^8.11.0"
   }
 }
