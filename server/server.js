@@ -42,7 +42,7 @@ const loginLimiter = rateLimit({
 
 // Serve admin login page from /public/admin
 app.get('/admin/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/admin/login.html'));
+  res.sendFile(path.join(__dirname, '../admin/login.html'));
 });
 
 // Handle login
@@ -87,7 +87,7 @@ app.get('/admin/dashboard', (req, res) => {
   if (!req.session.user) {
     return res.redirect('/admin/login');
   }
-  res.sendFile(path.join(__dirname, '../public/admin/dashboard.html'));
+  res.sendFile(path.join(__dirname, '../admin/dashboard.html'));
 });
 
 // API routes
