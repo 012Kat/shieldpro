@@ -50,38 +50,21 @@
   color: #111;
 }
 
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
 /* Responsive Navigation */
 /* Mobile: Phones - screens 600px and below */
-@media (max-width: 600px) {
-  
-  /* Header & Navigation */
-  .nav-container {
-    padding: 0 10px;
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block; /* visible only on mobile */
   }
-
-  /* Make nav menu vertical and full width */
-  .main-nav ul {
-    flex-direction: column;
-    gap: 15px;
-    position: static; /* easier to manage on small screens */
-    background-color: #222;
-    padding: 15px 10px;
-    display: none;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  }
-
-  /* Show menu when active */
-  .main-nav.active ul {
-    display: flex;
-  }
-
-  /* Make nav links bigger and easier to tap */
-  .main-nav a {
-    font-size: 1.2rem;
-    padding: 12px 0;
-  }
-
   /* Logo smaller */
   .logo {
     font-size: 1.4rem;
@@ -104,7 +87,7 @@
     width: 100%;
     max-width: 280px;
   }
-
+}
   /* Services grid single column */
   .services-grid {
     grid-template-columns: 1fr;
