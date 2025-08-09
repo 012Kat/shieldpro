@@ -2,7 +2,7 @@
 // Script to create an initial admin user in the database
 
 const { Pool } = require('pg');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 // DB connection
 const pool = new Pool({
