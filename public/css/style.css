@@ -61,11 +61,46 @@
 
 /* Responsive Navigation */
 /* Mobile: Phones - screens 600px and below */
-@media (max-width: 700px) {
+/* Mobile Styles - screens 768px and below */
+@media (max-width: 768px) {
+
+  /* Show the menu toggle button */
   .menu-toggle {
-    display: block; /* visible only on mobile */
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
   }
-  /* Logo smaller */
+
+  /* Hide nav menu by default on mobile */
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #222;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Show nav menu when active */
+  .main-nav.active ul {
+    display: flex;
+  }
+
+  /* Adjust nav links for easier tapping */
+  .main-nav a {
+    font-size: 1.2rem;
+    padding: 12px 0;
+  }
+
+  /* Adjust logo size */
   .logo {
     font-size: 1.4rem;
   }
